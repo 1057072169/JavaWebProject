@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="../css/default.css" />
-	<link rel="stylesheet" type="text/css" href="../css/Books_add_success.css" />
+	<link rel="stylesheet" type="text/css" href="../css/add_success.css" />
 
 <body>
 <div id="navi">
