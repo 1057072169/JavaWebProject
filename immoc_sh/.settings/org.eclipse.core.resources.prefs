@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/action=GBK
+encoding//src/action/StudentsAction.java=UTF-8
+encoding//src/service=GBK
+encoding//src/service/impl/StudentsDAOImpl.java=UTF-8
+encoding//test/entity/TestStudents.java=GBK
