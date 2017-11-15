@@ -3,10 +3,14 @@ package entity;
 import java.util.Date;
 
 public class Books {
-	private String sid;//编号
-	private String sname;//书名
-	private Date loandate;//日期
-	private String total;//数目
+	//涔︾睄缂栧彿
+	private String sid;
+    //涔﹀悕
+	private String sname;
+	//鍊熶功鏃ユ湡
+	private Date loandate;
+	//涔︾睄鍓╀綑鏁伴噺
+	private String total;
 	
 	
 	public Books() {
