@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/entity=GBK
+encoding//src/entity/Book.java=UTF-8
+encoding//src/entity/Order.java=GBK
+encoding//src/entity/Page.java=UTF-8
+encoding//src/service/impl/BusinessService.java=GBK
+encoding//src/service/impl/BusinessServiceImpl.java=GBK
+encoding//src/web/client=GBK
+encoding//src/web/manager/BookServlet.java=GBK
+encoding//src/web/manager/CategoryServlet.java=GBK
+encoding//src/web/manager/ConfirmOrderServlet.java=GBK
+encoding//src/web/manager/ListOrderServlet.java=GBK
+encoding//src/web/manager/OrderDetailServlet.java=GBK
+encoding/<project>=UTF-8
+encoding/readme.txt=GBK
