@@ -4,18 +4,24 @@
 
 <hibernate-configuration>
 	<session-factory>
+		<!-- 数据库连接配置代码 -->
 		<property name="connection.username">root</property>
 		<property name="connection.password">153963</property>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8</property>
+		<!-- 指定使用MySql数据库格式的SQL语句 -->
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 指定在控制台打印输出SQL语句 -->
 		<property name="show_sql">true</property>
+		<!--是否格式化显示sql语句-->
 		<property name="format_sql">true</property>
+		<!-- 指定Hibernate启动的时候自动创建表结构 -->
 		<property name="hbm2dd1.auto">update</property>
+		<!-- 要加上这一句，否则可能会遇到异常 -->
 		<property name="hibernate.current_session_context_class">thread</property>
-	
-	    <mapping resource="entity/Students.hbm.xml"/>
-	    <mapping resource="entity/Users.hbm.xml"/>
-	    <mapping resource="entity/Books.hbm.xml"/>
+        <!-- 指定自己创建的类为相关Hibernate实体类 -->
+		<mapping resource="entity/Students.hbm.xml" />
+		<mapping resource="entity/Users.hbm.xml" />
+		<mapping resource="entity/Books.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
