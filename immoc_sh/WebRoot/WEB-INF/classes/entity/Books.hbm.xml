@@ -4,7 +4,9 @@
 	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 	<class name="entity.Books" table="BOOKS">
+		<!-- 主键 -->
 		<id name="sid" type="java.lang.String" length="8">
+			<!-- 主键生成方式：自动生成 -->
 			<generator class="assigned"></generator>
 		</id>
 		<property name="sname" type="java.lang.String"></property>
