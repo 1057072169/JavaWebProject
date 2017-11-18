@@ -55,7 +55,7 @@
 			<s:iterator value="#session.books_list" var="stu">
 				<tr class="list">
 					<td><s:property value="#stu.sid" /></td>
-					<td><a href=""><s:property value="#stu.sname" /></a></td>
+					<td><a href="<%=path%>/books/Books_modify.action?sid=<s:property value="#stu.sid"/>"><s:property value="#stu.sname"/></a></td>
 					<td><s:date name="#stu.loandate" format="yyyy年MM月dd日" /></td>
 					<td><s:property value="#stu.total" /></td>
 					<td><a
