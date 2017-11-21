@@ -1,0 +1,24 @@
+  Hibernate中有几个常用的概念SessionFactory,Session与Transaction。值得注意的是，
+这里的Session不同于Servlet中的HttpSession，二者虽然都可以理解为会话，但使用的情况不太一样。
+  ①SessionFactory(org.hibernate.SessionFactory):一个线程安全的Session工厂类，能为不同
+的线程生成不同的Session。SessionFactory维护着Session的相关资源，包括数据库连接池，缓存数据等。
+  ②Session(org.hibernate.Session):Session代表用户的一次操作。Session的生命周期很短，
+在操作开始时通过执行SessionFactory.getCurrentSession()或openSession() 生产，操作结束时
+调用session.close()方法关闭（使用getCurrentSession()方法时会自动关闭）。Session维护着Session
+Session相关的资源，包括Transaction，当前数据库连接等。
+  ③Transaction(org.hibernate.Transaction)：Transaction代表一次事务，事务内包含若干的数据修改
+ ，数据提交后才生效。如果事务失败或者回滚，所有的修改都会失效。的事务不同于数据库的事务。
+Hibernate可能使用各种机制保证事务性，包括JTA（Java Transaction API,Java事务接口），第三方事务管理，
+数据库事务等。
+
+
+Hibernate openSession() 和 getCurrentSession()的区别：
+getHiberanteTemplate 、getCurrentSession和OpenSession 
+1，采用getCurrentSession()创建的Session会绑定到当前的线程中去、而采用OpenSession()则不会。
+2，采用getCurrentSession()创建的Session在commit或rollback后会自动关闭，采用OpenSession()必须手动关闭。
+3，openSession每次创建新的session对象，getCurrentSession使用现有的session对象
+4，采用getCurrentSession()需要在Hibernate.cfg.xml配置文件中加入如下配置：
+如果是本地事物，及JDBC一个数据库：
+<propety name=”Hibernate.current_session_context_class”>thread</propety>
+如果是全局事物，及jta事物、多个数据库资源或事物资源：
+<propety name=”Hibernate.current_session_context_class”>jta</propety>
