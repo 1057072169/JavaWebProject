@@ -1,9 +1,9 @@
 package service;
 
-import model.Pager;
-import model.Student;
 import dao.StudentDao;
 import dao.SublistStudentDaoImpl;
+import entity.Pager;
+import entity.Student;
 
 public class SublistStudentServiceImpl implements StudentService {
 

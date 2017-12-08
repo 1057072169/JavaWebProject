@@ -7,12 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import entity.Pager;
+import entity.Student;
 import page.Constant;
 import service.JdbcSqlStudentServiceImpl;
 import service.StudentService;
 import util.StringUtil;
-import model.Pager;
-import model.Student;
 
 public class JdbcSqlServlet extends HttpServlet {
 
@@ -28,11 +28,11 @@ public class JdbcSqlServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// 接收request里的参数
-		String stuName = request.getParameter("stuName"); // 学生姓名
+		//获取用户输入的姓名
+		String stuName = request.getParameter("stuName"); 
 
-		// 获取学生性别
 		int gender = Constant.DEFAULT_GENDER;
+		// 获取用户选取的学生性别
 		String genderStr = request.getParameter("gender");
 		if (genderStr != null && !"".equals(genderStr.trim())) {
 			gender = Integer.parseInt(genderStr);

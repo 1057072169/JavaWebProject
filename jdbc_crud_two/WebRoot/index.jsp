@@ -11,7 +11,7 @@
 	//下面的语句初始为初始化页面，如果不加下面语句访问主页不会显示数据库中保存的数据
 	FriendsDao ud = new FriendsDaoImpl();
 	List<Friends> ulist = ud.getAllFriends();
-	request.setAttribute("ulist", ulist);
+	session.setAttribute("ulist", ulist);
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>

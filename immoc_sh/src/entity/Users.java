@@ -2,7 +2,7 @@ package entity;
 
 /**
  * @ClassName: Users.java
- * @Description: 用户类
+ * @Description: 用户（管理员）实体类
  * @version: "1.8.0_131"
  * @author: 寇爽
  * @date: 2017年11月14日 下午7:54:10

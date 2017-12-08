@@ -6,10 +6,9 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import db.MyHibernateSessionFactory;
-
 import entity.Users;
 import service.UsersDAO;
+import util.MyHibernateSessionFactory;
 
 /**
  * @ClassName: UsersDAOImpl.java

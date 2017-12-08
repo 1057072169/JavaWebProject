@@ -1,9 +1,9 @@
 package service;
 
-import model.Pager;
-import model.Student;
 import dao.JdbcSqlStudentDaoImpl;
 import dao.StudentDao;
+import entity.Pager;
+import entity.Student;
 
 public class JdbcSqlStudentServiceImpl implements StudentService {
 	private StudentDao studentDao;

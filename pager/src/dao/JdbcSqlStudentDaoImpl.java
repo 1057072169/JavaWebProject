@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import entity.Pager;
+import entity.Student;
 import page.Constant;
 import util.JdbcUtil;
-import model.Pager;
-import model.Student;
 
 /**
  * @ClassName: JdbcSqlStudentDaoImpl.java
@@ -79,7 +79,7 @@ public class JdbcSqlStudentDaoImpl implements StudentDao {
 
 			// 获取总页数
 			int totalPage = totalRecord / pageSize;
-			//如果总记录数除以每页显示的记录条数不等于0的话总页数+1
+			// 如果总记录数除以每页显示的记录条数不等于0的话总页数+1
 			if (totalRecord % pageSize != 0) {
 				totalPage++;
 			}

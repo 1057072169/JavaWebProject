@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import entity.Pager;
+import entity.Student;
 import page.Constant;
 import util.JdbcUtil;
-import model.Pager;
-import model.Student;
 
 /**
  * @ClassName: SublistStudentDaoImpl.java
@@ -26,7 +26,7 @@ public class SublistStudentDaoImpl implements StudentDao {
 
 		Pager<Student> pager = new Pager<Student>(pageNum, pageSize,
 				allStudenList);
-		
+
 		return pager;
 	}
 
@@ -80,6 +80,7 @@ public class SublistStudentDaoImpl implements StudentDao {
 		return result;
 	}
 
+	// 测试
 	public static void main(String[] args) {
 		List<Student> lst = getAllStudent(new Student());
 		for (Student s : lst) {

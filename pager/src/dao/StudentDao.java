@@ -1,7 +1,7 @@
 package dao;
 
-import model.Pager;
-import model.Student;
+import entity.Pager;
+import entity.Student;
 
 public interface StudentDao {
 	

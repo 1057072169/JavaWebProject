@@ -6,11 +6,11 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import db.MyHibernateSessionFactory;
 import entity.Books;
 import entity.Students;
 import service.BooksDAO;
 import service.StudentsDAO;
+import util.MyHibernateSessionFactory;
 
 /**
  * @ClassName: StudentsDAOImpl.java

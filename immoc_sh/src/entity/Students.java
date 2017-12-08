@@ -2,6 +2,13 @@ package entity;
 
 import java.util.Date;
 
+/**
+ * @ClassName: Students.java
+ * @Description: 学生的实体类
+ * @version: "1.8.0_131"
+ * @author: 寇爽
+ * @date: 2017年12月8日 上午9:14:35
+ */
 public class Students {
 	// 学号
 	private String sid;
